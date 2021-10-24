@@ -13,6 +13,7 @@ const STOP_JUMP_FORCE = 450.0
 const MAX_SHOOT_POSE_TIME = 0.3
 const MAX_FLOOR_AIRBORNE_TIME = 0.15
 
+
 var anim = ""
 var siding_left = false
 var jumping = false
