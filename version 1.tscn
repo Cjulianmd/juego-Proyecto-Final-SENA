@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Sprites/Sound/next_level.wav" type="AudioStream" id=1]
+[ext_resource path="res://cohete meta 1.png" type="Texture" id=2]
+[ext_resource path="res://version 1.gd" type="Script" id=3]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 14, 21.326 )
+
+[node name="Area2D" type="Area2D"]
+script = ExtResource( 3 )
+next_level = "res://Level_2.tscn"
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 0.5, -2.00001 )
+scale = Vector2( 0.176768, 0.209302 )
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 1 )
+
+[node name="anier" type="AudioStreamPlayer2D" parent="."]
+rotation = 0.181514
+stream = ExtResource( 1 )
+volume_db = 8.666
+
+[connection signal="finished" from="anier" to="." method="_on_anier_finished"]

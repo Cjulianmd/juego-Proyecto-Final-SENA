@@ -11,5 +11,5 @@ func disable():
 	if disabled:
 		return
 
-	($AnimationPlayer as AnimationPlayer).play("shutdown")
+	($AnimationPlayer as AnimationPlayer).play("Stand")
 	disabled = true

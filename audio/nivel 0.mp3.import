@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/nivel 0.mp3-7e7e1cb0a49db03ebcf2b5d79ab63977.mp3str"
+
+[deps]
+
+source_file="res://audio/nivel 0.mp3"
+dest_files=[ "res://.import/nivel 0.mp3-7e7e1cb0a49db03ebcf2b5d79ab63977.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

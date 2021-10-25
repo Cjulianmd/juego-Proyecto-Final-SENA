@@ -1,0 +1,167 @@
+[gd_scene load_steps=17 format=2]
+
+[ext_resource path="res://bloque 3 lugar2.png" type="Texture" id=1]
+[ext_resource path="res://bloques m1.png" type="Texture" id=2]
+[ext_resource path="res://Bostero.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://movimiento.jpg" type="Texture" id=4]
+[ext_resource path="res://fonts/Kenney Pixel.ttf" type="DynamicFontData" id=5]
+[ext_resource path="res://main.gd" type="Script" id=6]
+[ext_resource path="res://menu.png" type="Texture" id=7]
+[ext_resource path="res://BOTON2.png" type="Texture" id=8]
+[ext_resource path="res://BOTON3.png" type="Texture" id=9]
+[ext_resource path="res://BOTON1.png" type="Texture" id=10]
+[ext_resource path="res://fonts/pixelsix00.ttf" type="DynamicFontData" id=11]
+[ext_resource path="res://Button2.gd" type="Script" id=12]
+
+[sub_resource type="TileSet" id=1]
+0/name = "movimiento.jpg 0"
+0/texture = ExtResource( 4 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 9, 20, 80, 54 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape_one_way = false
+0/shape_one_way_margin = 0.0
+0/shapes = [  ]
+0/z_index = 0
+1/name = "bloques m1.png 1"
+1/texture = ExtResource( 2 )
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 4, 5, 13, 16 )
+1/tile_mode = 0
+1/occluder_offset = Vector2( 0, 0 )
+1/navigation_offset = Vector2( 0, 0 )
+1/shape_offset = Vector2( 0, 0 )
+1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+1/shape_one_way = false
+1/shape_one_way_margin = 0.0
+1/shapes = [  ]
+1/z_index = 0
+2/name = "bloque 3 lugar2.png 2"
+2/texture = ExtResource( 1 )
+2/tex_offset = Vector2( 0, 0 )
+2/modulate = Color( 1, 1, 1, 1 )
+2/region = Rect2( 0, 5, 35, 34 )
+2/tile_mode = 0
+2/occluder_offset = Vector2( 0, 0 )
+2/navigation_offset = Vector2( 0, 0 )
+2/shape_offset = Vector2( 0, 0 )
+2/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+2/shape_one_way = false
+2/shape_one_way_margin = 0.0
+2/shapes = [  ]
+2/z_index = 0
+
+[sub_resource type="DynamicFont" id=2]
+size = 33
+outline_color = Color( 0.188235, 0.164706, 0.717647, 1 )
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 7
+font_data = ExtResource( 11 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 100
+outline_size = 19
+outline_color = Color( 0.0784314, 0.686275, 0.0941176, 1 )
+font_data = ExtResource( 5 )
+
+[node name="main" type="Node2D"]
+script = ExtResource( 6 )
+
+[node name="TileMap" type="TileMap" parent="."]
+scale = Vector2( 3, 3 )
+tile_set = SubResource( 1 )
+cell_size = Vector2( 8, 8 )
+format = 1
+
+[node name="menu" type="Sprite" parent="TileMap"]
+position = Vector2( 140.962, 8.1715 )
+scale = Vector2( 0.34112, 0.244753 )
+
+[node name="menu" type="Sprite" parent="TileMap/menu"]
+position = Vector2( -27.4337, 288.015 )
+scale = Vector2( 1.2369, 2.08998 )
+texture = ExtResource( 7 )
+
+[node name="Label" type="Label" parent="TileMap"]
+margin_left = -3.71405
+margin_top = -5.59966
+margin_right = 131.286
+margin_bottom = 41.4003
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0.658824, 1, 0, 1 )
+custom_colors/font_outline_modulate = Color( 0.0862745, 0.0901961, 0.498039, 1 )
+custom_colors/font_color_shadow = Color( 0.454902, 0.117647, 0.647059, 1 )
+text = "CREYBOTS"
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="TileMap/Label"]
+margin_left = 220.485
+margin_top = 154.943
+margin_right = 272.485
+margin_bottom = 175.943
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0.0313726, 0.0431373, 0.0196078, 1 )
+text = "version: 1.0.0
+"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="."]
+margin_left = -5.0
+margin_top = 121.0
+margin_right = 189.0
+margin_bottom = 203.0
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color_disabled = Color( 0.14902, 0.788235, 0.101961, 1 )
+custom_colors/font_color = Color( 0.298039, 0.0941176, 0.686275, 1 )
+custom_colors/font_color_hover = Color( 0.0980392, 0.32549, 0.623529, 1 )
+custom_colors/font_color_pressed = Color( 0.913725, 0.305882, 0.360784, 1 )
+icon = ExtResource( 10 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+
+[node name="Button2" type="Button" parent="."]
+margin_left = -6.0
+margin_top = 193.0
+margin_right = 222.0
+margin_bottom = 278.0
+icon = ExtResource( 8 )
+flat = true
+script = ExtResource( 12 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="Button2"]
+margin_left = 0.999992
+margin_top = 84.0
+margin_right = 181.0
+margin_bottom = 145.0
+icon = ExtResource( 9 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="Button2" to="Button2" method="_on_Button2_pressed"]

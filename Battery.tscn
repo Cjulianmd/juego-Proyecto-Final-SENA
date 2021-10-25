@@ -1,21 +1,22 @@
 [gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Battery.gd" type="Script" id=1]
-[ext_resource path="res://WhatsApp Image 2021-10-24 at 12.15.20 PM (1).jpeg" type="Texture" id=2]
+[ext_resource path="res://bateria re.png" type="Texture" id=2]
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 9.83848
 height = 11.5269
 
 [node name="Battery" type="Area2D"]
+position = Vector2( -6.10352e-05, 2.66966 )
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_group_": true
 }
 
 [node name="Sprite" type="Sprite" parent="."]
-position = Vector2( -0.349511, 0.565381 )
-scale = Vector2( 0.0445093, 0.0399882 )
+position = Vector2( -1.13782, -0.635597 )
+scale = Vector2( 0.0474099, 0.0465784 )
 texture = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

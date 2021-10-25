@@ -1,6 +1,6 @@
-
+class_name Enemy
 extends RigidBody2D
-
+signal hit
 const WALK_SPEED = 50
 
 enum State {
@@ -76,8 +76,8 @@ func _pre_explode():
 	
 	mode = MODE_STATIC
 	($SoundExplode as AudioStreamPlayer2D).play()
-
-
+	
+	
 func _bullet_collider(cc, s, dp):
 	mode = MODE_RIGID
 	state = State.DYING
@@ -86,6 +86,14 @@ func _bullet_collider(cc, s, dp):
 	physics_material_override.friction = 1
 	cc.disable()
 	($SoundHit as AudioStreamPlayer2D).play()
+
+
+
+
 	
+
+func _on_Spikes_Hit():
+	$Timer.start()
+	$CollisionShape2D.disabled = true
 	
 	

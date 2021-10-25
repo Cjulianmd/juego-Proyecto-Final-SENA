@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://movimiento.jpg" type="Texture" id=1]
+
+[node name="ParallaxBackground" type="ParallaxBackground"]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="."]
+motion_mirroring = Vector2( 31610, 900 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxLayer"]
+position = Vector2( 5727.56, 660.08 )
+scale = Vector2( -40.7411, 39.7074 )
+texture = ExtResource( 1 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 2160.35, 42, 115.903, 86 )

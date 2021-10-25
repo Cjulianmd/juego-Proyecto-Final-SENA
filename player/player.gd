@@ -13,7 +13,6 @@ const STOP_JUMP_FORCE = 450.0
 const MAX_SHOOT_POSE_TIME = 0.3
 const MAX_FLOOR_AIRBORNE_TIME = 0.15
 
-
 var anim = ""
 var siding_left = false
 var jumping = false
@@ -56,7 +55,7 @@ func _integrate_forces(s):
 	lv.x -= floor_h_velocity
 	floor_h_velocity = 0.0
 
-
+	
 	var found_floor = false
 	var floor_index = -1
 
@@ -67,6 +66,7 @@ func _integrate_forces(s):
 			found_floor = true
 			floor_index = x
 
+	
 	
 	if shoot and not shooting:
 		call_deferred("_shot_bullet")
@@ -201,12 +201,11 @@ func _shot_bullet():
 	sprite_smoke.restart()
 	sound_shoot.play()
 
-	add_collision_exception_with (bi)
+	add_collision_exception_with(bi) 
+
 
 func _spawn_enemy_above():
 	var e = Enemy.instance()
 	e.position = position + 50 * Vector2.UP
 	get_parent().add_child(e)
-		
-	   
-	
+

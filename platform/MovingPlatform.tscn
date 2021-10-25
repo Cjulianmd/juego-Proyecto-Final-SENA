@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://platform/moving_platform.gd" type="Script" id=1]
-[ext_resource path="res://enemy/movible.png" type="Texture" id=2]
+[ext_resource path="res://movimiento.jpg" type="Texture" id=2]
 
 [node name="MovingPlatform" type="Node2D"]
 script = ExtResource( 1 )
@@ -10,8 +10,8 @@ script = ExtResource( 1 )
 mode = 3
 
 [node name="Sprite" type="Sprite" parent="Platform"]
-position = Vector2( 0.19202, -0.356842 )
-scale = Vector2( 0.261625, 0.286336 )
+position = Vector2( 1.5, -0.489828 )
+scale = Vector2( 0.247159, 0.2772 )
 texture = ExtResource( 2 )
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Platform"]

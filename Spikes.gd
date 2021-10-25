@@ -7,6 +7,11 @@ func _physics_process(delta):
 			emit_signal("Hit")
 			
 
+export var motion = Vector2()
+export var cycle = 2.0
+
+var accum = 0.0
+
 
 func _on_Spikes_Hit():
 	$Timer.start()

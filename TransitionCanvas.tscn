@@ -12,7 +12,6 @@ shader_param/mask = ExtResource( 3 )
 [node name="TransitionCanvas" type="CanvasLayer"]
 
 [node name="ColorRect" parent="." instance=ExtResource( 1 )]
-visible = false
 material = SubResource( 1 )
 margin_right = 1773.0
 color = Color( 0.0862745, 0.101961, 0.168627, 1 )

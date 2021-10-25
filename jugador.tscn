@@ -1,0 +1,59 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://robot jojo.png" type="Texture" id=1]
+[ext_resource path="res://Sprite.gd" type="Script" id=2]
+
+[sub_resource type="Animation" id=1]
+resource_name = "falsa"
+tracks/0/type = "value"
+tracks/0/path = NodePath("AnimationPlayer/Sprite:hframes")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 6 ]
+}
+
+[sub_resource type="Animation" id=2]
+resource_name = "verdadera"
+length = 0.01
+loop = true
+step = 10.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("AnimationPlayer/Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ 3, 4 ]
+}
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 19.1019, 72.9555 )
+
+[node name="jugador" type="KinematicBody2D"]
+position = Vector2( -0.749146, -0.749153 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/falsa = SubResource( 1 )
+anims/verdadera = SubResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="AnimationPlayer"]
+position = Vector2( -2.82843, -2.54298 )
+scale = Vector2( 1.16037, 1.57088 )
+texture = ExtResource( 1 )
+hframes = 6
+frame = 3
+script = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( -4.49492, -8.98984 )
+shape = SubResource( 3 )

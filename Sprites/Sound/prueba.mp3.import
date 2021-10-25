@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/prueba.mp3-56506a39628ad9ba9aa9abbc29498fae.mp3str"
+
+[deps]
+
+source_file="res://Sprites/Sound/prueba.mp3"
+dest_files=[ "res://.import/prueba.mp3-56506a39628ad9ba9aa9abbc29498fae.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

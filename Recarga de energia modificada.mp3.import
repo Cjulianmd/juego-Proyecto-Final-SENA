@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Recarga de energia modificada.mp3-4d4835036aacab7919aaac672b11ad0f.mp3str"
+
+[deps]
+
+source_file="res://Recarga de energia modificada.mp3"
+dest_files=[ "res://.import/Recarga de energia modificada.mp3-4d4835036aacab7919aaac672b11ad0f.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

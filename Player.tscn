@@ -1,74 +1,107 @@
-[gd_scene load_steps=26 format=2]
+[gd_scene load_steps=28 format=2]
 
 [ext_resource path="res://Player.gd" type="Script" id=1]
-[ext_resource path="res://Sprites/spr_jump0.png" type="Texture" id=2]
-[ext_resource path="res://Sprites/spr_jump1.png" type="Texture" id=3]
-[ext_resource path="res://Sprites/spr_run0.png" type="Texture" id=4]
-[ext_resource path="res://Sprites/spr_run1.png" type="Texture" id=5]
-[ext_resource path="res://Sprites/spr_run2.png" type="Texture" id=6]
-[ext_resource path="res://Sprites/spr_run3.png" type="Texture" id=7]
-[ext_resource path="res://Sprites/spr_run4.png" type="Texture" id=8]
-[ext_resource path="res://Sprites/spr_run5.png" type="Texture" id=9]
+[ext_resource path="res://Sprites/spr_run4.png" type="Texture" id=2]
+[ext_resource path="res://bateria re.png" type="Texture" id=3]
+[ext_resource path="res://player/osb_left.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/spr_jump0.png" type="Texture" id=5]
+[ext_resource path="res://Sprites/spr_run3.png" type="Texture" id=6]
+[ext_resource path="res://Sprites/spr_run0.png" type="Texture" id=7]
+[ext_resource path="res://Sprites/spr_run2.png" type="Texture" id=8]
+[ext_resource path="res://Sprites/spr_stand.png" type="Texture" id=9]
 [ext_resource path="res://Sprites/spr_fall0.png" type="Texture" id=10]
 [ext_resource path="res://Sprites/spr_fall1.png" type="Texture" id=11]
-[ext_resource path="res://Sprites/spr_stand.png" type="Texture" id=12]
+[ext_resource path="res://Sprites/spr_run5.png" type="Texture" id=12]
 [ext_resource path="res://GUI.tscn" type="PackedScene" id=13]
-[ext_resource path="res://WhatsApp Image 2021-10-24 at 12.15.20 PM (1).jpeg" type="Texture" id=14]
-[ext_resource path="res://colour.ttf" type="DynamicFontData" id=15]
-[ext_resource path="res://Sound/JuiceUp.wav" type="AudioStream" id=16]
-[ext_resource path="res://Sound/Point Collect.wav" type="AudioStream" id=17]
-[ext_resource path="res://Sound/hit.wav" type="AudioStream" id=18]
-[ext_resource path="res://Sound/steps.wav" type="AudioStream" id=19]
-[ext_resource path="res://Sound/jump2.wav" type="AudioStream" id=20]
-[ext_resource path="res://contrast.ttf" type="DynamicFontData" id=21]
+[ext_resource path="res://contrast.ttf" type="DynamicFontData" id=14]
+[ext_resource path="res://Sprites/spr_jump1.png" type="Texture" id=15]
+[ext_resource path="res://Sprites/Sound/JuiceUp.wav" type="AudioStream" id=16]
+[ext_resource path="res://Sprites/spr_run1.png" type="Texture" id=17]
+[ext_resource path="res://Sprites/Sound/hit.wav" type="AudioStream" id=18]
+[ext_resource path="res://Sprites/Sound/steps.wav" type="AudioStream" id=19]
+[ext_resource path="res://Sprites/Sound/jump2.wav" type="AudioStream" id=20]
+[ext_resource path="res://player/osb_right.png" type="Texture" id=21]
+[ext_resource path="res://player/osb_jump.png" type="Texture" id=22]
+[ext_resource path="res://player/osb_fire.png" type="Texture" id=23]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [ ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ) ],
+"frames": [ ExtResource( 7 ), ExtResource( 17 ), ExtResource( 8 ), ExtResource( 6 ), ExtResource( 2 ), ExtResource( 12 ) ],
 "loop": true,
 "name": "Run",
 "speed": 10.0
-}, {
-"frames": [ ExtResource( 2 ), ExtResource( 3 ) ],
-"loop": false,
-"name": "Jump",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 12 ) ],
-"loop": false,
-"name": "Stand",
-"speed": 5.0
 }, {
 "frames": [ ExtResource( 10 ), ExtResource( 11 ) ],
 "loop": false,
 "name": "Fall",
 "speed": 5.0
+}, {
+"frames": [ ExtResource( 5 ), ExtResource( 15 ) ],
+"loop": false,
+"name": "Jump",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 9 ) ],
+"loop": false,
+"name": "Stand",
+"speed": 5.0
 } ]
 
 [sub_resource type="CapsuleShape2D" id=2]
-radius = 11.9481
-height = 14.6688
+radius = 12.2117
+height = 39.2756
 
 [sub_resource type="DynamicFont" id=3]
 size = 38
-font_data = ExtResource( 21 )
+font_data = ExtResource( 14 )
 
 [sub_resource type="DynamicFont" id=4]
 size = 100
-font_data = ExtResource( 15 )
+font_data = ExtResource( 14 )
 
 [node name="Player" type="KinematicBody2D"]
-position = Vector2( 0.840927, 2.37813 )
+position = Vector2( -2.63263, -11.9372 )
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_group_": true
 }
 
 [node name="Sprite" type="AnimatedSprite" parent="."]
-position = Vector2( -0.374569, -2.62204 )
-scale = Vector2( 0.39465, 0.371239 )
+scale = Vector2( 0.5, 0.5 )
 frames = SubResource( 1 )
-animation = "Stand"
+
+[node name="UI" type="CanvasLayer" parent="Sprite"]
+layer = 0
+
+[node name="Left" type="TouchScreenButton" parent="Sprite/UI"]
+position = Vector2( 27.7593, 360.87 )
+scale = Vector2( 1.49157, 1.46265 )
+normal = ExtResource( 4 )
+passby_press = true
+action = "move_left"
+visibility_mode = 1
+
+[node name="Right" type="TouchScreenButton" parent="Sprite/UI"]
+position = Vector2( 121.542, 361.415 )
+scale = Vector2( 1.49157, 1.46265 )
+normal = ExtResource( 21 )
+passby_press = true
+action = "move_right"
+visibility_mode = 1
+
+[node name="Jump" type="TouchScreenButton" parent="Sprite/UI"]
+position = Vector2( 666.224, 359.02 )
+scale = Vector2( 1.49157, 1.46265 )
+normal = ExtResource( 22 )
+action = "jump"
+visibility_mode = 1
+
+[node name="Fire" type="TouchScreenButton" parent="Sprite/UI"]
+position = Vector2( 668.073, 262.788 )
+scale = Vector2( 1.49157, 1.46265 )
+normal = ExtResource( 23 )
+action = "shoot"
+visibility_mode = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 2 )
@@ -86,7 +119,6 @@ wait_time = 0.1
 position = Vector2( 55.96, 32 )
 
 [node name="BarSprite" parent="Control/Canvas/Position2D" index="0"]
-margin_right = 400.0
 tint_under = Color( 0.243137, 0.368627, 0.533333, 1 )
 
 [node name="TextPos" type="Position2D" parent="Control/Canvas" index="1"]
@@ -96,10 +128,10 @@ __meta__ = {
 }
 
 [node name="Label" type="Label" parent="Control/Canvas/TextPos"]
-margin_right = 255.0
-margin_bottom = 42.0
+margin_right = 148.0
+margin_bottom = 29.0
 custom_fonts/font = SubResource( 3 )
-text = "live batery"
+text = "live Battery "
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -112,9 +144,9 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="Control/Canvas/BBiconPOS"]
-position = Vector2( 22.2564, 0.434388 )
-scale = Vector2( 0.112085, 0.101461 )
-texture = ExtResource( 14 )
+position = Vector2( -4.78569, -1.62484 )
+scale = Vector2( 0.139401, 0.0917065 )
+texture = ExtResource( 3 )
 
 [node name="ReadyPosition" type="Position2D" parent="Control/Canvas" index="3"]
 position = Vector2( 515.04, 313.1 )
@@ -123,12 +155,10 @@ __meta__ = {
 }
 
 [node name="ReadyText" type="Label" parent="Control/Canvas/ReadyPosition"]
-margin_left = -755.0
-margin_top = -523.0
-margin_right = 1029.0
-margin_bottom = 410.0
+margin_right = 40.0
+margin_bottom = 14.0
 custom_fonts/font = SubResource( 4 )
-text = "hack!"
+text = "hack"
 align = 1
 valign = 1
 __meta__ = {
@@ -136,10 +166,12 @@ __meta__ = {
 }
 
 [node name="StartGameTimer" type="Timer" parent="."]
+wait_time = 2.0
 one_shot = true
 autostart = true
 
 [node name="HideReadyTimer" type="Timer" parent="."]
+wait_time = 2.0
 one_shot = true
 
 [node name="HitTimer" type="Timer" parent="."]
@@ -157,7 +189,7 @@ stream = ExtResource( 16 )
 volume_db = -9.176
 
 [node name="BatterySound" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource( 17 )
+stream = ExtResource( 16 )
 volume_db = -7.137
 
 [node name="HitSound" type="AudioStreamPlayer2D" parent="."]

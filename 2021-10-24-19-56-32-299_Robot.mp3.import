@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/2021-10-24-19-56-32-299_Robot.mp3-535cf988517ad64c3e93c44229725378.mp3str"
+
+[deps]
+
+source_file="res://2021-10-24-19-56-32-299_Robot.mp3"
+dest_files=[ "res://.import/2021-10-24-19-56-32-299_Robot.mp3-535cf988517ad64c3e93c44229725378.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

@@ -79,7 +79,7 @@ texture = ExtResource( 1 )
 region_rect = Rect2( 128, 64, 32, 32 )
 
 [node name="TreeMid2" type="Sprite" parent="."]
-position = Vector2( 96, 32 )
+position = Vector2( 384.5, 10.0797 )
 texture = ExtResource( 1 )
 region_rect = Rect2( 128, 32, 32, 32 )
 
@@ -124,7 +124,7 @@ region_rect = Rect2( 224, 32, 32, 32 )
 polygon = PoolVector2Array( -16, -16, 12, -16, 12, 16, -16, 16 )
 
 [node name="PlatformFloor" type="Sprite" parent="."]
-position = Vector2( 0, 128 )
+position = Vector2( 326.683, 338.011 )
 texture = ExtResource( 1 )
 region_rect = Rect2( 64, 0, 32, 32 )
 
@@ -134,7 +134,7 @@ region_rect = Rect2( 64, 0, 32, 32 )
 polygon = PoolVector2Array( 16, -12, 16, 12, -16, 12, -16, -12 )
 
 [node name="PlatformEdge" type="Sprite" parent="."]
-position = Vector2( 32, 128 )
+position = Vector2( 142.309, 252.451 )
 texture = ExtResource( 1 )
 region_rect = Rect2( 96, 0, 32, 32 )
 

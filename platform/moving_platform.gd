@@ -2,7 +2,7 @@ class_name MovingPlatform
 extends Node2D
 
 export var motion = Vector2()
-export var cycle = 1.0
+export var cycle = 2.0
 
 var accum = 0.0
 
