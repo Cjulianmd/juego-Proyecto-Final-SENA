@@ -166,19 +166,16 @@ __meta__ = {
 }
 
 [node name="StartGameTimer" type="Timer" parent="."]
-wait_time = 2.0
 one_shot = true
 autostart = true
 
 [node name="HideReadyTimer" type="Timer" parent="."]
-wait_time = 2.0
 one_shot = true
 
 [node name="HitTimer" type="Timer" parent="."]
 one_shot = true
 
 [node name="BlinkingTimer" type="Timer" parent="."]
-wait_time = 2.0
 one_shot = true
 
 [node name="BlinkHideShowTimer" type="Timer" parent="."]
