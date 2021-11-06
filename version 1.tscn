@@ -1,19 +1,19 @@
 [gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://Sprites/Sound/next_level.wav" type="AudioStream" id=1]
-[ext_resource path="res://cohete meta 1.png" type="Texture" id=2]
+[ext_resource path="res://Sound/next_level.wav" type="AudioStream" id=1]
+[ext_resource path="res://parza2.png" type="Texture" id=2]
 [ext_resource path="res://version 1.gd" type="Script" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 14, 21.326 )
+extents = Vector2( 15.4541, 22.6937 )
 
 [node name="Area2D" type="Area2D"]
 script = ExtResource( 3 )
 next_level = "res://Level_2.tscn"
 
 [node name="Sprite" type="Sprite" parent="."]
-position = Vector2( 0.5, -2.00001 )
-scale = Vector2( 0.176768, 0.209302 )
+position = Vector2( -1.57504, -0.928341 )
+scale = Vector2( 0.116017, 0.120026 )
 texture = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

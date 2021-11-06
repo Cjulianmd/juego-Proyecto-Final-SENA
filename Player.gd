@@ -22,11 +22,6 @@ func _ready():
 	
 func _physics_process(delta):
 	
-	if(get_slide_collision(get_slide_count()-1) !=null):
-		var obj_col = get_slide_collision(get_slide_count()-1).collider
-		if(obj_col.is_in_group("enemy")):
-			queue_free()
-			
 	if $StepsSound.is_playing():
 		StepFX = false
 
@@ -169,4 +164,3 @@ func _level_complete_goal():
 	Ready = false
 	Charging = true
 	ChargeVal = 100
-

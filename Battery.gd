@@ -1,8 +1,8 @@
 extends Area2D
 signal Energy
-var P = position.y #Starting Position
-var PL = P-10 #Position limit
-var Up = true #Going up or down?
+var P = position.y 
+var PL = P-10 
+var Up = true 
 func _ready():
 	P = position.y
 	PL = P-10

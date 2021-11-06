@@ -14,7 +14,7 @@ func _physics_process(delta):
 			if !$anier.is_playing():
 				BG_Music.stop()
 				$anier.play()
-
+				
 
 func _on_anier_finished():
-	get_tree().change_scene("res://Level_2.tscn")
+	get_tree().change_scene("res://armado.tscn")

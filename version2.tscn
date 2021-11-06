@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://parza1.png" type="Texture" id=1]
+[ext_resource path="res://zapato.gd" type="Script" id=2]
+[ext_resource path="res://Sound/next_level.wav" type="AudioStream" id=3]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 440.788, 177.774 )
+
+[node name="Area2D" type="Area2D"]
+script = ExtResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 1.55602, 0.68269 )
+scale = Vector2( 0.0456802, 0.089882 )
+texture = ExtResource( 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 1.55602, 0.68269 )
+scale = Vector2( 0.0456802, 0.089882 )
+shape = SubResource( 1 )
+
+[node name="anier" type="AudioStreamPlayer2D" parent="."]
+position = Vector2( -1.44031, 2.93009 )
+scale = Vector2( 0.0456802, 0.089882 )
+stream = ExtResource( 3 )
+
+[connection signal="finished" from="anier" to="." method="_on_AudioStreamPlayer2D_finished"]

@@ -31,6 +31,7 @@ shape = SubResource( 1 )
 position = Vector2( 1.18603, -0.248735 )
 scale = Vector2( -0.601514, 0.631472 )
 frames = SubResource( 2 )
+frame = 5
 playing = true
 
 [node name="FloorDetection" type="RayCast2D" parent="AnimatedSprite"]

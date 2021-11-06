@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/sonido diodo.mp3-a49c722001905b4f90711b18d7cc6154.mp3str"
+
+[deps]
+
+source_file="res://sonido diodo.mp3"
+dest_files=[ "res://.import/sonido diodo.mp3-a49c722001905b4f90711b18d7cc6154.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

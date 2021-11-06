@@ -17,4 +17,4 @@ func _physics_process(delta):
 				
 
 func _on_NextLevelSound_finished():
-	get_tree().change_scene(next_level)
+	get_tree().change_scene("res://Level_2.tscn")

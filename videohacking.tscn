@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Videolevel2.gd" type="Script" id=1]
+[ext_resource path="res://videos/videolevel2.ogv" type="VideoStream" id=2]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="VideoPlayer" type="VideoPlayer" parent="."]
+margin_right = 1280.0
+margin_bottom = 716.0
+stream = ExtResource( 2 )
+autoplay = true
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="finished" from="VideoPlayer" to="VideoPlayer" method="_on_VideoPlayer_finished"]

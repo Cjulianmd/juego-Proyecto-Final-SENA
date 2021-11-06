@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://Sprites/Sound/LBB Short Song.ogg" type="AudioStream" id=1]
+[ext_resource path="res://Sound/armin_van_buuren_turn_it_up_official_lyric_video_mp3_66626.mp3" type="AudioStream" id=1]
 [ext_resource path="res://BG_Music.gd" type="Script" id=2]
 
 [node name="BG_Music" type="AudioStreamPlayer"]

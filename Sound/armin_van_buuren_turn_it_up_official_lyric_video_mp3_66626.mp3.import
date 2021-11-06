@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/armin_van_buuren_turn_it_up_official_lyric_video_mp3_66626.mp3-4021a8fb94c3e50f74eb931d4c4c38bd.mp3str"
+
+[deps]
+
+source_file="res://Sound/armin_van_buuren_turn_it_up_official_lyric_video_mp3_66626.mp3"
+dest_files=[ "res://.import/armin_van_buuren_turn_it_up_official_lyric_video_mp3_66626.mp3-4021a8fb94c3e50f74eb931d4c4c38bd.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

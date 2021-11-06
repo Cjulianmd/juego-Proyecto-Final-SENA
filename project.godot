@@ -44,13 +44,20 @@ _global_script_class_icons={
 
 [application]
 
-config/name="creybots"
-run/main_scene="res://MainMenu.tscn"
+config/name="CREYBOTS"
+config/description="JJJULIAN
+AAANIER"
+run/main_scene="res://carga.tscn"
+boot_splash/image="res://carga.tscn"
 config/icon="res://satelite.png"
 
 [autoload]
 
 BG_Music="*res://BG_Music.tscn"
+
+[debug]
+
+settings/crash_handler/message=""
 
 [display]
 

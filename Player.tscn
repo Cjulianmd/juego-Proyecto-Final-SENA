@@ -13,7 +13,6 @@
 [ext_resource path="res://Sprites/spr_fall1.png" type="Texture" id=11]
 [ext_resource path="res://Sprites/spr_run5.png" type="Texture" id=12]
 [ext_resource path="res://GUI.tscn" type="PackedScene" id=13]
-[ext_resource path="res://contrast.ttf" type="DynamicFontData" id=14]
 [ext_resource path="res://Sprites/spr_jump1.png" type="Texture" id=15]
 [ext_resource path="res://Sprites/Sound/JuiceUp.wav" type="AudioStream" id=16]
 [ext_resource path="res://Sprites/spr_run1.png" type="Texture" id=17]
@@ -23,6 +22,7 @@
 [ext_resource path="res://player/osb_right.png" type="Texture" id=21]
 [ext_resource path="res://player/osb_jump.png" type="Texture" id=22]
 [ext_resource path="res://player/osb_fire.png" type="Texture" id=23]
+[ext_resource path="res://Font/Robotronica.otf" type="DynamicFontData" id=24]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -30,11 +30,6 @@ animations = [ {
 "loop": true,
 "name": "Run",
 "speed": 10.0
-}, {
-"frames": [ ExtResource( 10 ), ExtResource( 11 ) ],
-"loop": false,
-"name": "Fall",
-"speed": 5.0
 }, {
 "frames": [ ExtResource( 5 ), ExtResource( 15 ) ],
 "loop": false,
@@ -45,6 +40,11 @@ animations = [ {
 "loop": false,
 "name": "Stand",
 "speed": 5.0
+}, {
+"frames": [ ExtResource( 10 ), ExtResource( 11 ) ],
+"loop": false,
+"name": "Fall",
+"speed": 5.0
 } ]
 
 [sub_resource type="CapsuleShape2D" id=2]
@@ -53,14 +53,14 @@ height = 39.2756
 
 [sub_resource type="DynamicFont" id=3]
 size = 38
-font_data = ExtResource( 14 )
+font_data = ExtResource( 24 )
 
 [sub_resource type="DynamicFont" id=4]
 size = 100
-font_data = ExtResource( 14 )
+font_data = ExtResource( 24 )
 
 [node name="Player" type="KinematicBody2D"]
-position = Vector2( -2.63263, -11.9372 )
+position = Vector2( -5.62921, -2.94725 )
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_group_": true
@@ -131,7 +131,7 @@ __meta__ = {
 margin_right = 148.0
 margin_bottom = 29.0
 custom_fonts/font = SubResource( 3 )
-text = "live Battery "
+text = "VIDA BATERIA"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -155,10 +155,12 @@ __meta__ = {
 }
 
 [node name="ReadyText" type="Label" parent="Control/Canvas/ReadyPosition"]
-margin_right = 40.0
-margin_bottom = 14.0
+margin_left = -17.9797
+margin_top = -83.9052
+margin_right = 335.02
+margin_bottom = 26.0948
 custom_fonts/font = SubResource( 4 )
-text = "hack"
+text = "  a jugar"
 align = 1
 valign = 1
 __meta__ = {
@@ -166,16 +168,19 @@ __meta__ = {
 }
 
 [node name="StartGameTimer" type="Timer" parent="."]
+wait_time = 2.0
 one_shot = true
 autostart = true
 
 [node name="HideReadyTimer" type="Timer" parent="."]
+wait_time = 2.0
 one_shot = true
 
 [node name="HitTimer" type="Timer" parent="."]
 one_shot = true
 
 [node name="BlinkingTimer" type="Timer" parent="."]
+wait_time = 2.0
 one_shot = true
 
 [node name="BlinkHideShowTimer" type="Timer" parent="."]
