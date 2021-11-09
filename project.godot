@@ -74,6 +74,13 @@ M={
  ]
 }
 
+[layer_names]
+
+2d_physics/layer_1="Player "
+2d_physics/layer_2="tilemaps"
+2d_physics/layer_3="enemy"
+2d_physics/layer_4="batery "
+
 [rendering]
 
 quality/driver/fallback_to_gles2=true

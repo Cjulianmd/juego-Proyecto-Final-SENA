@@ -1,0 +1,73 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://jefe-2.png" type="Texture" id=1]
+[ext_resource path="res://jefe-2.gd" type="Script" id=2]
+
+[sub_resource type="AtlasTexture" id=1]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 0, 0, 340, 185 )
+
+[sub_resource type="AtlasTexture" id=2]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 340, 0, 340, 185 )
+
+[sub_resource type="AtlasTexture" id=3]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 680, 0, 340, 185 )
+
+[sub_resource type="AtlasTexture" id=4]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 1020, 0, 340, 185 )
+
+[sub_resource type="AtlasTexture" id=5]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 1360, 0, 340, 185 )
+
+[sub_resource type="SpriteFrames" id=6]
+animations = [ {
+"frames": [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ), SubResource( 4 ), SubResource( 5 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=7]
+extents = Vector2( 100.525, 65.1546 )
+
+[node name="KinematicBody2D" type="KinematicBody2D"]
+collision_layer = 2048
+collision_mask = 1024
+script = ExtResource( 2 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 1.18603, -25.9407 )
+scale = Vector2( -0.601514, 0.909223 )
+frames = SubResource( 6 )
+frame = 3
+playing = true
+
+[node name="FloorDetection" type="RayCast2D" parent="AnimatedSprite"]
+position = Vector2( -187.944, 66.2215 )
+enabled = true
+collision_mask = 3072
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 3.17839, -5.29729 )
+shape = SubResource( 7 )
+
+[node name="LeftRay" type="RayCast2D" parent="."]
+position = Vector2( -90.0489, -22.4575 )
+enabled = true
+cast_to = Vector2( -10, 0 )
+collision_mask = 3072
+
+[node name="Rightray" type="RayCast2D" parent="."]
+position = Vector2( 98.1733, -18.6872 )
+enabled = true
+cast_to = Vector2( 10, 0 )
+collision_mask = 3072

@@ -11,10 +11,9 @@ func _physics_process(delta):
 	for i in Bodies:
 		if i.name == "Player":
 			emit_signal("Goal")
-			if !$anier.is_playing():
+			if !$haking.is_playing():
 				BG_Music.stop()
-				$anier.play()
-				
+				$haking.play()
 
 func _on_anier_finished():
 	get_tree().change_scene("res://videohacking.tscn")

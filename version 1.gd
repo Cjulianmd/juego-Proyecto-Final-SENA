@@ -7,13 +7,7 @@ func _ready():
 	BG_Music.stop()
 	
 func _physics_process(delta):
-	var Bodies = get_overlapping_bodies()
-	for i in Bodies:
-		if i.name == "Player":
-			emit_signal("Goal")
-			if !$anier.is_playing():
-				BG_Music.stop()
-				$anier.play()
+	pass
 				
 
 func _on_anier_finished():
