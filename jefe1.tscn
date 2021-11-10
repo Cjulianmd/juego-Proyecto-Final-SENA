@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=23 format=2]
 
 [ext_resource path="res://jefe1.gd" type="Script" id=1]
 [ext_resource path="res://espaw.gd" type="Script" id=2]
@@ -11,10 +11,6 @@
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 33.6381, 50.044 )
-
-[sub_resource type="AtlasTexture" id=2]
-atlas = ExtResource( 3 )
-region = Rect2( 0, 0, 154, 200 )
 
 [sub_resource type="AtlasTexture" id=3]
 atlas = ExtResource( 3 )
@@ -47,9 +43,29 @@ flags = 4
 atlas = ExtResource( 5 )
 region = Rect2( 300, 0, 150, 200 )
 
+[sub_resource type="AtlasTexture" id=11]
+atlas = ExtResource( 3 )
+region = Rect2( 0, 0, 154, 200 )
+
+[sub_resource type="AtlasTexture" id=12]
+atlas = ExtResource( 3 )
+region = Rect2( 154, 0, 154, 200 )
+
+[sub_resource type="AtlasTexture" id=13]
+atlas = ExtResource( 3 )
+region = Rect2( 308, 0, 154, 200 )
+
+[sub_resource type="AtlasTexture" id=14]
+atlas = ExtResource( 3 )
+region = Rect2( 462, 0, 154, 200 )
+
+[sub_resource type="AtlasTexture" id=15]
+atlas = ExtResource( 3 )
+region = Rect2( 616, 0, 154, 200 )
+
 [sub_resource type="SpriteFrames" id=7]
 animations = [ {
-"frames": [ SubResource( 2 ), SubResource( 3 ), SubResource( 4 ), SubResource( 5 ), SubResource( 6 ) ],
+"frames": [ SubResource( 3 ), SubResource( 4 ), SubResource( 5 ), SubResource( 6 ) ],
 "loop": true,
 "name": "default",
 "speed": 5.0
@@ -57,6 +73,11 @@ animations = [ {
 "frames": [ SubResource( 8 ), SubResource( 9 ), SubResource( 10 ) ],
 "loop": true,
 "name": "New Anim",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 11 ), SubResource( 12 ), SubResource( 13 ), SubResource( 14 ), SubResource( 15 ) ],
+"loop": true,
+"name": "New Anim 1",
 "speed": 5.0
 } ]
 
@@ -71,7 +92,7 @@ shape = SubResource( 1 )
 position = Vector2( -0.391591, 0.166939 )
 scale = Vector2( -0.5218, 0.524199 )
 frames = SubResource( 7 )
-animation = "New Anim"
+animation = "New Anim 1"
 frame = 2
 playing = true
 
@@ -119,13 +140,13 @@ wait_time = 3.6
 autostart = true
 
 [node name="LeftRay" type="RayCast2D" parent="."]
-position = Vector2( -25.2974, -33.8782 )
+position = Vector2( -29.9693, 28.8593 )
 enabled = true
 cast_to = Vector2( -10, 0 )
 collision_mask = 2
 
 [node name="Rightray" type="RayCast2D" parent="."]
-position = Vector2( 21.7661, -33.7289 )
+position = Vector2( 36.7831, 30.3434 )
 enabled = true
 cast_to = Vector2( 10, 0 )
 collision_mask = 2

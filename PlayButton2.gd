@@ -18,8 +18,4 @@ func _on_PlayButton_mouse_exited():
 
 
 func _on_PlayButton_pressed():
-	rect_scale.x = .9
-	rect_scale.y = .9
-	OS.shell_open("https://youtube.com/Adderly2dd")
-	OS.shell_open("https://2ddentertainment.com/LBB")
-	get_tree().change_scene("MainMenu.tscn")
+	pass

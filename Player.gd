@@ -22,6 +22,11 @@ func _ready():
 	
 func _physics_process(delta):
 	
+	if(get_slide_collision(get_slide_count()-1) !=null):
+		var obj_col = get_slide_collision(get_slide_count()-1).collider
+		if(obj_col.is_in_group("atake")):
+			get_tree().change_scene("res://Level_1.tscn")
+	
 	if $StepsSound.is_playing():
 		StepFX = false
 
@@ -193,5 +198,3 @@ func _on_dao_enemigo_timeout():
 
 
 
-func _on_Spikes5_Hit():
-	pass # Replace with function body.
