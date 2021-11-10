@@ -6,7 +6,7 @@
 [ext_resource path="res://Sprites/BG/Background3.png" type="Texture" id=4]
 [ext_resource path="res://Spikes.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Battery.tscn" type="PackedScene" id=6]
-[ext_resource path="res://TransitionCanvas.tscn" type="PackedScene" id=7]
+[ext_resource path="res://enemyeart.tscn" type="PackedScene" id=7]
 
 [node name="World" type="Node"]
 
@@ -22,12 +22,12 @@ position = Vector2( 28.7002, 663.119 )
 next_level = "res://Level_2.tscn"
 
 [node name="Player" parent="." instance=ExtResource( 3 )]
-editor/display_folded = true
-position = Vector2( 224, 64 )
+position = Vector2( 554.099, 605.766 )
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="Player"]
 
 [node name="Sprite" type="Sprite" parent="Player/ParallaxBackground"]
+position = Vector2( -50.3969, 83.1548 )
 texture = ExtResource( 4 )
 offset = Vector2( 512, 200 )
 
@@ -82,7 +82,12 @@ position = Vector2( 1121.39, -161.92 )
 [node name="Battery6" parent="." instance=ExtResource( 6 )]
 position = Vector2( 95.9792, -381.222 )
 
-[node name="TransitionCanvas" parent="." instance=ExtResource( 7 )]
+[node name="KinematicBody2D" parent="." instance=ExtResource( 7 )]
+position = Vector2( 328.221, 589.847 )
+
+[node name="KinematicBody2D2" parent="." instance=ExtResource( 7 )]
+position = Vector2( 656.442, 608.874 )
+
 [connection signal="Goal" from="Socket" to="Player" method="_level_complete_goal"]
 [connection signal="Hit" from="Spikes" to="Player" method="_on_Spikes_Hit"]
 [connection signal="Hit" from="Spikes2" to="Player" method="_on_Spikes_Hit"]

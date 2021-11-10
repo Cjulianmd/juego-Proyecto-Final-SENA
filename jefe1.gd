@@ -1,12 +1,7 @@
 extends KinematicBody2D
-signal attak
-
-onready var pos_fire = $AnimatedSprite/pos_fire
-
-var player: KinematicBody2D = null
-
 const MAX_SPEED : float = 100.0
 const GRAVITY : float = 25.0
+signal Hit
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
@@ -41,7 +36,4 @@ func _process(delta):
 	if(get_slide_collision(get_slide_count()-1) !=null):
 		var obj_col = get_slide_collision(get_slide_count()-1).collider
 		if(obj_col.is_in_group("player")):
-			queue_free()
-
-
- # Replace with function body.
+			get_tree().change_scene("res://Level_1.tscn")

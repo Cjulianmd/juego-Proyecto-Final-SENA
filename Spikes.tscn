@@ -54,7 +54,7 @@ position = Vector2( 1.62678, 11.5029 )
 scale = Vector2( -1.35917, 0.816598 )
 frames = SubResource( 8 )
 animation = "walk"
-frame = 1
+frame = 2
 playing = true
 
 [node name="FloorDetection" type="RayCast2D" parent="AnimatedSprite"]
@@ -70,3 +70,4 @@ cast_to = Vector2( 10, 0 )
 
 [connection signal="Hit" from="." to="." method="_on_Spikes_Hit"]
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
+[connection signal="timeout" from="Timer" to="." method="_on_Timr_timeout"]

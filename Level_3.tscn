@@ -171,11 +171,6 @@ scale = Vector2( 0.5, 0.5 )
 position = Vector2( 2272.51, 623.387 )
 scale = Vector2( 0.5, 0.5 )
 
-[node name="Spikes3" parent="." instance=ExtResource( 5 )]
-position = Vector2( 177.029, -87.2996 )
-rotation = -1.5708
-scale = Vector2( 0.5, 0.5 )
-
 [node name="Battery" parent="." instance=ExtResource( 6 )]
 position = Vector2( 460.536, 12.2023 )
 
@@ -271,7 +266,6 @@ position = Vector2( 1547.25, 376.722 )
 [connection signal="Hit" from="Spikes4" to="Player" method="_on_Spikes_Hit"]
 [connection signal="Hit" from="Spikes8" to="Player" method="_on_Spikes_Hit"]
 [connection signal="Hit" from="Spikes14" to="Player" method="_on_Spikes_Hit"]
-[connection signal="Hit" from="Spikes3" to="Player" method="_on_Spikes_Hit"]
 [connection signal="Energy" from="Battery" to="Player" method="_get_energy"]
 [connection signal="Energy" from="Battery2" to="Player" method="_get_energy"]
 [connection signal="Energy" from="Battery7" to="Player" method="_get_energy"]

@@ -134,6 +134,12 @@ func _on_Spikes_Hit():
 		Ready = false
 		$HitTimer.start()
 		$BlinkHideShowTimer.start()
+	
+func _on_Spiks_Hit():
+	if Blinking == false:
+		Ready = false
+		$HitTimer.start()
+		$BlinkHideShowTimer.start()
 
 
 func _on_HitTimer_timeout():
@@ -164,3 +170,24 @@ func _level_complete_goal():
 	Ready = false
 	Charging = true
 	ChargeVal = 100
+	
+func _on_enemigo_Hit():
+	if Blinking == false:
+		$HitSound.play()
+		Ready = false
+		$HitTimer.start()
+		$BlinkHideShowTimer.start()
+
+func _on_dao_timeout():
+	Ready = true
+	Blinking = true
+	$BlinkingTimer.start() # Replace with function body.
+
+
+func _on_dao_enemigo_timeout():
+	$Control/Canvas/ReadyPosition/ReadyText.hide() 
+	
+	
+	
+	
+
