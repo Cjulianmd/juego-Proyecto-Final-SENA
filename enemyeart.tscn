@@ -1,19 +1,38 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://enemycontrol.gd" type="Script" id=1]
-[ext_resource path="res://enemigo6.png" type="Texture" id=2]
-[ext_resource path="res://enemigo4.png" type="Texture" id=3]
-[ext_resource path="res://enemigo 2.png" type="Texture" id=4]
-[ext_resource path="res://enemigo 3.png" type="Texture" id=5]
-[ext_resource path="res://nemigo1.png" type="Texture" id=6]
-[ext_resource path="res://enemigo5.png" type="Texture" id=7]
+[ext_resource path="res://enemigos sin fondo.png" type="Texture" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 12.3826, 21.806 )
 
+[sub_resource type="AtlasTexture" id=3]
+atlas = ExtResource( 2 )
+region = Rect2( 0, 0, 48, 138 )
+
+[sub_resource type="AtlasTexture" id=4]
+atlas = ExtResource( 2 )
+region = Rect2( 48, 0, 48, 138 )
+
+[sub_resource type="AtlasTexture" id=5]
+atlas = ExtResource( 2 )
+region = Rect2( 96, 0, 48, 138 )
+
+[sub_resource type="AtlasTexture" id=6]
+atlas = ExtResource( 2 )
+region = Rect2( 144, 0, 48, 138 )
+
+[sub_resource type="AtlasTexture" id=7]
+atlas = ExtResource( 2 )
+region = Rect2( 192, 0, 48, 138 )
+
+[sub_resource type="AtlasTexture" id=8]
+atlas = ExtResource( 2 )
+region = Rect2( 240, 0, 48, 138 )
+
 [sub_resource type="SpriteFrames" id=2]
 animations = [ {
-"frames": [ ExtResource( 6 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 3 ), ExtResource( 7 ), ExtResource( 2 ) ],
+"frames": [ SubResource( 3 ), SubResource( 4 ), SubResource( 5 ), SubResource( 6 ), SubResource( 7 ), SubResource( 8 ) ],
 "loop": true,
 "name": "default",
 "speed": 5.0
@@ -30,10 +49,9 @@ script = ExtResource( 1 )
 shape = SubResource( 1 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
-position = Vector2( 1.18603, -0.248735 )
+position = Vector2( 1.18603, 3.53103 )
 scale = Vector2( -0.601514, 0.631472 )
 frames = SubResource( 2 )
-frame = 3
 playing = true
 
 [node name="FloorDetection" type="RayCast2D" parent="AnimatedSprite"]

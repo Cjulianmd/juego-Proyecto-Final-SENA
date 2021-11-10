@@ -25,12 +25,12 @@ position = Vector2( 8609.81, 1296.08 )
 next_level = "res://Level_4.tscn"
 
 [node name="Player" parent="." instance=ExtResource( 3 )]
-position = Vector2( 59.819, 512.783 )
+position = Vector2( 4111.24, 398.912 )
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="Player"]
 
 [node name="Sprite" type="Sprite" parent="Player/ParallaxBackground"]
-position = Vector2( 52, 31.2896 )
+position = Vector2( 170.286, 71.6116 )
 scale = Vector2( 1.40625, 1.84567 )
 texture = ExtResource( 4 )
 offset = Vector2( 512, 200 )

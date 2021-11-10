@@ -94,7 +94,6 @@ position = Vector2( 1.18603, -25.9407 )
 scale = Vector2( -0.601514, 0.909223 )
 frames = SubResource( 13 )
 animation = "movimiento"
-frame = 2
 playing = true
 
 [node name="FloorDetection" type="RayCast2D" parent="AnimatedSprite"]
@@ -103,13 +102,23 @@ enabled = true
 collision_mask = 3072
 
 [node name="atake" type="Position2D" parent="AnimatedSprite"]
-position = Vector2( 7.11514, 160.651 )
+position = Vector2( 1.50212, 172.911 )
 scale = Vector2( -1.52416, -36.1901 )
 script = ExtResource( 3 )
 npc = ExtResource( 4 )
 
 [node name="Timer" type="Timer" parent="AnimatedSprite/atake"]
 wait_time = 3.0
+autostart = true
+
+[node name="atake2" type="Position2D" parent="AnimatedSprite"]
+position = Vector2( -10.3915, 444.496 )
+scale = Vector2( -1.52416, -36.1901 )
+script = ExtResource( 3 )
+npc = ExtResource( 4 )
+
+[node name="Timer" type="Timer" parent="AnimatedSprite/atake2"]
+wait_time = 3.2
 autostart = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -129,3 +138,4 @@ cast_to = Vector2( 10, 0 )
 collision_mask = 3072
 
 [connection signal="timeout" from="AnimatedSprite/atake/Timer" to="AnimatedSprite/atake" method="_on_Timer_timeout"]
+[connection signal="timeout" from="AnimatedSprite/atake2/Timer" to="AnimatedSprite/atake2" method="_on_Timer_timeout"]

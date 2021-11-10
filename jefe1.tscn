@@ -1,12 +1,16 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://jefe1.gd" type="Script" id=1]
 [ext_resource path="res://espaw.gd" type="Script" id=2]
 [ext_resource path="res://jefe movimiento.png" type="Texture" id=3]
-[ext_resource path="res://atake-jefe2.tscn" type="PackedScene" id=4]
+[ext_resource path="res://atake-jefe1.tscn" type="PackedScene" id=4]
+[ext_resource path="res://jefe ataque (1).png" type="Texture" id=5]
+[ext_resource path="res://atake-jefe1-3.tscn" type="PackedScene" id=6]
+[ext_resource path="res://atake-jefe1-4.tscn" type="PackedScene" id=7]
+[ext_resource path="res://atake-jefe1-2.tscn" type="PackedScene" id=8]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 70.6658, 134.802 )
+extents = Vector2( 33.6381, 50.044 )
 
 [sub_resource type="AtlasTexture" id=2]
 atlas = ExtResource( 3 )
@@ -28,11 +32,31 @@ region = Rect2( 462, 0, 154, 200 )
 atlas = ExtResource( 3 )
 region = Rect2( 616, 0, 154, 200 )
 
+[sub_resource type="AtlasTexture" id=8]
+flags = 4
+atlas = ExtResource( 5 )
+region = Rect2( 0, 0, 150, 200 )
+
+[sub_resource type="AtlasTexture" id=9]
+flags = 4
+atlas = ExtResource( 5 )
+region = Rect2( 150, 0, 150, 200 )
+
+[sub_resource type="AtlasTexture" id=10]
+flags = 4
+atlas = ExtResource( 5 )
+region = Rect2( 300, 0, 150, 200 )
+
 [sub_resource type="SpriteFrames" id=7]
 animations = [ {
 "frames": [ SubResource( 2 ), SubResource( 3 ), SubResource( 4 ), SubResource( 5 ), SubResource( 6 ) ],
 "loop": true,
 "name": "default",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 8 ), SubResource( 9 ), SubResource( 10 ) ],
+"loop": true,
+"name": "New Anim",
 "speed": 5.0
 } ]
 
@@ -40,22 +64,24 @@ animations = [ {
 script = ExtResource( 1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 3.70811, 0.192741 )
 shape = SubResource( 1 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
-position = Vector2( -1.46871, 2.61146 )
-scale = Vector2( -0.828838, 1.23283 )
+position = Vector2( -0.391591, 0.166939 )
+scale = Vector2( -0.5218, 0.524199 )
 frames = SubResource( 7 )
-frame = 4
+animation = "New Anim"
+frame = 2
 playing = true
 
 [node name="FloorDetection" type="RayCast2D" parent="AnimatedSprite"]
-position = Vector2( 94.8676, 75.1346 )
+position = Vector2( 63.1434, 71.4829 )
 enabled = true
 collision_mask = 2
 
 [node name="atake" type="Position2D" parent="AnimatedSprite"]
-position = Vector2( 127.903, -23.2967 )
+position = Vector2( 161.671, -38.8468 )
 script = ExtResource( 2 )
 npc = ExtResource( 4 )
 
@@ -63,14 +89,43 @@ npc = ExtResource( 4 )
 wait_time = 3.0
 autostart = true
 
+[node name="atake2" type="Position2D" parent="AnimatedSprite"]
+position = Vector2( 300.68, -40.8138 )
+rotation = 3.14159
+scale = Vector2( 1.91644, -1.90767 )
+script = ExtResource( 2 )
+npc = ExtResource( 8 )
+
+[node name="Timer" type="Timer" parent="AnimatedSprite/atake2"]
+wait_time = 3.2
+autostart = true
+
+[node name="atake3" type="Position2D" parent="AnimatedSprite"]
+position = Vector2( 458.066, -40.6945 )
+script = ExtResource( 2 )
+npc = ExtResource( 6 )
+
+[node name="Timer" type="Timer" parent="AnimatedSprite/atake3"]
+wait_time = 3.4
+autostart = true
+
+[node name="atake4" type="Position2D" parent="AnimatedSprite"]
+position = Vector2( 637.391, -37.0709 )
+script = ExtResource( 2 )
+npc = ExtResource( 7 )
+
+[node name="Timer" type="Timer" parent="AnimatedSprite/atake4"]
+wait_time = 3.6
+autostart = true
+
 [node name="LeftRay" type="RayCast2D" parent="."]
-position = Vector2( -76.3477, -26.9875 )
+position = Vector2( -25.2974, -33.8782 )
 enabled = true
 cast_to = Vector2( -10, 0 )
 collision_mask = 2
 
 [node name="Rightray" type="RayCast2D" parent="."]
-position = Vector2( 78.3988, -36.4978 )
+position = Vector2( 21.7661, -33.7289 )
 enabled = true
 cast_to = Vector2( 10, 0 )
 collision_mask = 2
@@ -80,3 +135,6 @@ wait_time = 4.0
 one_shot = true
 
 [connection signal="timeout" from="AnimatedSprite/atake/Timer" to="AnimatedSprite/atake" method="_on_Timer_timeout"]
+[connection signal="timeout" from="AnimatedSprite/atake2/Timer" to="AnimatedSprite/atake2" method="_on_Timer_timeout"]
+[connection signal="timeout" from="AnimatedSprite/atake3/Timer" to="AnimatedSprite/atake3" method="_on_Timer_timeout"]
+[connection signal="timeout" from="AnimatedSprite/atake4/Timer" to="AnimatedSprite/atake4" method="_on_Timer_timeout"]

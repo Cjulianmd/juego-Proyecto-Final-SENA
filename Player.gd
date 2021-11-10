@@ -106,7 +106,7 @@ func _on_BatteryTimer_timeout():
 	if Battery > 0 && !Charging:
 		Battery -= 1
 	elif Battery <= 0:
-		get_tree().reload_current_scene() 
+		get_tree().change_scene("res://GameOver.tscn") 
 		
 
 func _get_energy():
@@ -191,3 +191,7 @@ func _on_dao_enemigo_timeout():
 	
 	
 
+
+
+func _on_Spikes5_Hit():
+	pass # Replace with function body.

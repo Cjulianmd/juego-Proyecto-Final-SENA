@@ -54,7 +54,7 @@ position = Vector2( 1.62678, 11.5029 )
 scale = Vector2( -1.35917, 0.816598 )
 frames = SubResource( 8 )
 animation = "walk"
-frame = 2
+frame = 4
 playing = true
 
 [node name="FloorDetection" type="RayCast2D" parent="AnimatedSprite"]

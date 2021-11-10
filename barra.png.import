@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/WhatsApp Image 2021-09-27 at 5.50.17 AM.jpeg-cefeb04e96aaa29c88b6d420bc65b5e3.stex"
+path="res://.import/barra.png-1566b9d9bc0a9ec422165000e1c585b9.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://WhatsApp Image 2021-09-27 at 5.50.17 AM.jpeg"
-dest_files=[ "res://.import/WhatsApp Image 2021-09-27 at 5.50.17 AM.jpeg-cefeb04e96aaa29c88b6d420bc65b5e3.stex" ]
+source_file="res://barra.png"
+dest_files=[ "res://.import/barra.png-1566b9d9bc0a9ec422165000e1c585b9.stex" ]
 
 [params]
 
